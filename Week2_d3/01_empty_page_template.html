@@ -9,22 +9,25 @@
             .section{
                 font-family: "Garamond";
             }
+            .week1post{
+                left:10px;
+            }
         </style>
     </head>
 <body>
-<div class="week1post">
-This content is all about my week 1 work cool
-</div>
-</br>
-</vr>
-<div class="week2">
-<div class='section'>
-  Week 2
-</div>
-<div class='section'>
-  February 2nd, 2015
-</div>
-</div>
+    <div class="week1post">
+        This content is all about my week 1 work cool
+    </div>
+    </br>
+
+    <div class="week2">
+        <div class='section'>
+            Week 2
+        </div>
+        <div class='section'>
+            February 2nd, 2015
+        </div>
+    </div>
 
 <script type="text/javascript">
 
@@ -73,34 +76,34 @@ This content is all about my week 1 work cool
         // var circleRadius=200;
         // var aNumber = 6;
 
-        // //     // Your beautiful D3 code will go here
-        // //     // Create SVG element
+        // // //     // Your beautiful D3 code will go here
+        // // //     // Create SVG element
         //     var svg = d3.select(".week2")
         //                 .append("svg")
         //                 .attr("width", width)
         //                 .attr("height", height);
         //     svg
         //         .append("circle")
-        //         .attr("cx", width/2) 
-        //         .attr("cy", height/2)
-        //         .attr("r", circleRadius/2)
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 1)
         //         .attr("fill", "purple")
         //         .attr("opacity", .1);
 
         //     svg
         //         .append("circle")
-        //         .attr("cx", 50) 
+        //         .attr("cx", 70) 
         //         .attr("cy", 50)
-        //         .attr("r", 60)
+        //         .attr("r", 2)
         //         .attr("fill", "purple")
         //         .attr("opacity", .2);
 
 
         //     svg
         //         .append("circle")
-        //         .attr("cx", 60) 
+        //         .attr("cx", 70) 
         //         .attr("cy", 50)
-        //         .attr("r", 10)
+        //         .attr("r", 0)
         //         .attr("fill", "purple")
         //         .attr("opacity", .3);
 
@@ -108,7 +111,80 @@ This content is all about my week 1 work cool
         //         .append("circle")
         //         .attr("cx", 70) 
         //         .attr("cy", 50)
-        //         .attr("r", 5)
+        //         .attr("r", 0)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 1)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 9)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 0)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 0)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 1)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 1)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 6)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 1)
+        //         .attr("fill", "purple")
+        //         .attr("opacity", .4);
+
+        //     svg
+        //         .append("circle")
+        //         .attr("cx", 70) 
+        //         .attr("cy", 50)
+        //         .attr("r", 0)
         //         .attr("fill", "purple")
         //         .attr("opacity", .4);
 
@@ -126,49 +202,46 @@ This content is all about my week 1 work cool
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //FOURTH: data and svg elements
-        var width=500;
-        var height=700;
-        var leftMargin = 50;
-        var circleRadius=[0,2,0,0,1,1,1,1,0,0,1,0,1];
-
+        var width=1000;
+        var height=800;
+        var leftMargin = 75;
+        var topMargin = 100;
+        var coffee=[1,0,2,0,0,1];
+        var alert = [5,1,2,3,6,7];
             // Your beautiful D3 code will go here
             //Create SVG element
             var svg = d3.select(".week2")
                         .append("svg")
                         .attr("width", width)
                         .attr("height", height);
+
             svg
                 .selectAll("circle")
-                .data(circleRadius)
+                .data(coffee)
                 .enter()
                 .append("circle")
                 .attr("cx", function(d,i){ 
-                    console.log(i+"+ this is index");
-                    console.log(d+"+ this is every number in the array");
-
-                    return leftMargin+i*20; 
+                    return leftMargin+i*100; 
                 }) 
-                .attr("cy", 50)
-                .attr("r", function(d){return d+10; })
-                .attr("fill", function(d){
+                .attr("cy", topMargin+20)
+                .attr("r", function(d){
+                     return d*20+10; 
+                })
+                .attr("fill",function(d,i){
+                        return "rgb("+alert[i]*30+","+100+","+100+")";
+                })
+                // .attr("fill", function(d){
+                //     if(d==0){
+                //         return "none";
+                //     }
+                //     if(d>0){
+                //         return "green";
+                //     }
+                // })
+                .attr("stroke", function(d){
                     if(d==0){
-                        return "black";
+                        return "gray";
                     }
                     if(d>0){
                         return "green";
@@ -176,22 +249,18 @@ This content is all about my week 1 work cool
                 })
                 .attr("opacity", .5)
                 .transition()
-                .duration(5000)
-                .attr("cx", width/2)
-                .attr("r", function(d){
-                    return (d*15)+1; 
+                .duration(1000)
+                .attr("cx", function(d,i){
+                      return 100 * Math.cos( i ) + 200;
                 })
-                .attr("fill", function(d){
-                    if(d==0){
-                        return "black";
-                    }
-                    if(d==1){
-                        return "green";
-                    }
-                    if(d==2){
-                        return "red";
-                    }
+                .attr("cy", function(d,i){
+
+                     return 100 * Math.sin( i ) + 200;
+
                 })
+
+
+
 
 
 
