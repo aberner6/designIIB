@@ -3,23 +3,40 @@
     <head>
         <meta charset="utf-8">
         <title>A Page Template for Our Blogs!</title>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>        
+
         <style type="text/css">
             /* Any CSS style rules can go here */
             .images{
                 font-family: "Garamond";
                 margin-left:200px;
-                padding:100px;
+                padding:40px;
             }
             .descrip{
                 font-family: "Garamond";
                 text-align: left;
                 margin-left:100px;
-            }       
+            }   
+            .section{
+                font-family: "Garamond";
+            }  
+            .weekly{
+                margin-left: 20px;
+                font-size: 24px;
+                font-weight:bold;
+            }  
+            .left{
+                background-color: white;
+                height: auto;
+                width: 90%;
+            }              
             p{
-                font-family:Helvetica;
-                font-size:18pt;
-                text-align: center;
-                letter-spacing:1pt;
+                font-family: Helvetica;
+                font-size: 18pt;
+                text-align: left;
+                letter-spacing: 1pt;
+                margin-left: 50px;
+                padding: 10px;
             }
             img{
 
@@ -28,11 +45,21 @@
 
             }
             body{
-
+background-color: gray;
+height: auto;
+/*width: 80%;
+*/
+padding-left: 250px;
             }
         </style>
     </head>
 <body>
+
+
+<div class="left">    
+<div class="weekly">
+Week 1: January 22nd, 2015
+</div>
 <p>
 <a href="http://squarespace.com/seven">This is a link to SquareSpace</a>
 <br>
@@ -49,8 +76,80 @@ I love the way Square Space did a background video behind the introduction as we
     <div class='images'>
         <img src="imgs/airyTwo.png" alt = "Photo of AiryLight">
     </div>
-    <div class = "descrip">
+    <p>
         An installation of AiryLight where there were two lights next to each other, comparing city air qualities for New York City and San Francisco. 
+    </p>
+
+
+<div class="weekly">
+Week 2: February 2nd, 2015
+</div>
+    <div class="week2">
     </div>
+
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//FOURTH: data and svg elements
+        var width=500;
+        var height=700;
+        var leftMargin = 50;
+        var circleRadius=[0,2,0,0,1,1,1,1,0,0,1,0,1];
+
+            // Your beautiful D3 code will go here
+            //Create SVG element
+            var svg = d3.select(".week2")
+                        .append("svg")
+                        .attr("width", width)
+                        .attr("height", height);
+            svg
+                .selectAll("circle")
+                .data(circleRadius)
+                .enter()
+                .append("circle")
+                .attr("cx", function(d,i){ 
+                    console.log(i+"+ this is index");
+                    console.log(d+"+ this is every number in the array");
+
+                    return leftMargin+i*20; 
+                }) 
+                .attr("cy", 50)
+                .attr("r", function(d){return d+10; })
+                .attr("fill", function(d){
+                    if(d==0){
+                        return "black";
+                    }
+                    if(d>0){
+                        return "green";
+                    }
+                })
+                .attr("opacity", .5)
+                .transition()
+                .duration(20000)
+                .attr("cx", width/2)
+                .attr("r", function(d){
+                    return (d*15)+1; 
+                })
+                .attr("fill", function(d){
+                    if(d==0){
+                        return "black";
+                    }
+                    if(d==1){
+                        return "green";
+                    }
+                    if(d==2){
+                        return "red";
+                    }
+                })
+
+
+</script>
 </body>
 </html>
