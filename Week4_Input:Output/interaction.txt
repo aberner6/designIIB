@@ -1,0 +1,92 @@
+WEEK 4
+
+STUDENT WORK
+RESPONSES TO READINGS
+
+This week is about meaningful interaction and how to design reactions to those interactions.
+
+FUNNY EXAMPLES OF INTERACTIONS
+
+WHAT IS AN INTERACTION?
+- Action that produces a change in something
+- What is the action?
+
+CHANGING SOMETHING DENOTES THAT “SOMETHING” “CHANGES”
+- But how do we see / know that?
+- What is that something?
+- How does it change?
+
+INPUT -> OUTPUT
+
+INPUT:
+- Singular event: button press 
+	- physical examples: doorbell rings, light goes off, key turns and opens something
+	- digital examples: refresh “button”, submit etc.
+		- what does the button look like?
+		- what does the act of pressing it feel like?
+- Singular + Continuous event: click and drag, mousing around a screen
+
+OUTPUT:
+- Singular event:
+	- physical world: sound goes off, new “world” shown (inside of a house, for ex)
+	- digital world: color changes, thing grows bigger, new page shown
+		- is the reaction supposed to soothe us? alert us?
+		- or simply note that we have interacted with a thing?
+- Singular + Continuous event: 
+	- slide in sound (low to high, soft to loud), echo
+	- color gradient
+	- trail left
+	- progression of lighting up (pixels changing, LEDs twinkling from left to right)
+	- LERP
+
+DANGER
+- Recreation of satisfying physical interactions in daily life translated to the screen can lead to skeumorphism
+	- much better to design something for the screen *for the screen* that takes advantage of its magical properties
+
+RECAP:
+INPUT requires sensing (sight, hearing, taste, touch, smell)
+- mouse clicked / keyboard pressed / typed
+- sound heard
+- sight seen
+- pressure felt
+- thing tasted
+- thing smelled
+
+COMPUTER can take for input:
+- sight
+	- photo
+	- video
+	- computer’s video
+- hearing
+	- music
+	- sound (snap)
+- touch
+	- click
+	- drag
+	- mousing around
+COMPUTER can make output:
+- visual
+- sound
+- hidden (a variable changes but we don’t see anything)
+
+INPUT -> OUTPUT
+In order to *sense* an input, we need to set up something in our program that detects that input.
+Then we can create the appropriate output.
+
+As humans, that is like:
+- You tap me on the shoulder
+- I feel that tap
+- I respond by _X_looking up, opening my eyes, etc.
+For the computer that is like:
+- I click a place on the canvas
+- The computer has a software program running on it that says IF someone has clicked between here and here, I will acknowledge that click and trigger X
+- Triggering X = a visual, a sound
+
+RECORDING INPUT
+- In a variable
+- In an array
+
+CREATING OUTPUT
+- How to organize output (in a function)
+- Where to say “do output!” without it getting covered up by draw?
+
