@@ -1,0 +1,9 @@
+
+
+// Example 9-7: An array operation using dot length
+
+float[] values = new float[100];
+
+for (int i = 0; i < values.length; i ++ ) {
+  values[i] = 0;
+}  

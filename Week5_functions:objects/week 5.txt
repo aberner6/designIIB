@@ -1,0 +1,31 @@
+week 5
+OBJECTS
++
+interaction with audio
+interaction with image
+interaction with video
+
+concept of data
+
+storing data
+
+arrays
+looping through arrays
+
+audio in
+
+audio out
+
+audio in
+visual out
+
+mouse in
+audio out
+
+
+groupwork
+
+1. I take them through making objects etc.
+2. They take each other through it
+3. I introduce arrays with images, video
+4. They prep for their assignment of (Either) a re-write of more complex interaction using objects (Or) work manipulating images / video
