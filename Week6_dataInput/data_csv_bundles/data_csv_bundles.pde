@@ -3,7 +3,7 @@ Table myTable;
 int totalNums = 0;
 Drop[] drops;
 
-int topMargin = 20;
+int topMargin = 30;
 
 int lengthOfData = 4984;
 int[] wordCount;
@@ -17,9 +17,10 @@ String[] sectionOrder = {
   "Business Day", "Sports", "U.S.", "World", "Technology", "N.Y. / Region", "Opinion", "Arts", "Fashion & Style", "Health", "Science", "Travel", "Home & Garden", "Books", "Movies", "Theater", "Real Estate", "Automobiles", "Education", "Magazine", "Dining & Wine"
 };
 void setup() {
-  size(400, 400);
+  size(1200, 400);
   smooth();
-  background(0);
+  stroke(255);
+  background(105);
 
   myTable = loadTable("articles_view_edited.csv");
   lengthOfData = myTable.getRowCount();
@@ -31,7 +32,7 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  background(105);
   show();
   for (Drop d : drops) {
     d.update();
@@ -67,9 +68,10 @@ void show() {
     drops[i].tpos.y = map (wordCountIs, minWords, maxWords, topMargin, height-topMargin);
     if (l) {
       drops[i].tpos.y = height/2;
-      drops[i].tpos.x = map (wordCountIs, minWords, maxWords, topMargin, width-topMargin);
+      drops[i].size2 = map (wordCountIs, minWords, maxWords, 10, topMargin*2);
     }
     else {
+      drops[i].size2 = 10;
       drops[i].tpos.x = width/2;
       drops[i].tpos.y = map (wordCountIs, minWords, maxWords, topMargin, height-topMargin);
     }
