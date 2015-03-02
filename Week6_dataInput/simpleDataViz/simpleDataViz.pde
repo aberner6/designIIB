@@ -4,6 +4,8 @@ int[] arrayOfInts = {
 };
 int r = 10;
 int lMargin = 50;
+// A boolean to track whether we are recording are not
+boolean recording = false;
 
 void setup() {
   size(500, 500);
@@ -19,3 +21,16 @@ void draw() {
   }
 }
 
+
+void keyPressed() {
+  // If we press r, start or stop recording!
+  if (key == 'r' || key == 'R') {
+    recording = !recording;
+  }
+  // If we are recording call saveFrame!
+  // The number signs (#) indicate to Processing to 
+  // number the files automatically
+  if (recording) {
+    saveFrame("output/frames####.png");
+  }
+}
